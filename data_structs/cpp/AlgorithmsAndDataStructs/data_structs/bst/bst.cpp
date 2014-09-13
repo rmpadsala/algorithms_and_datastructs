@@ -154,6 +154,8 @@ namespace bst_ns {
             delete nodeToDelete;
         } else {
             // case - 4 node has both left and right subtree
+            // find largest node in left subtree, delete the node and
+            // swap the value with node to be deleted
             BSTNode* largest_node = find_largest(nodeToDelete->_left);
             remove(largest_node->_value, nodeToDelete);
             nodeToDelete->_value = largest_node->_value;

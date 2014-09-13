@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>AD54945E-7062-49F5-8416-64783CD79452</string>
+	<string>E1F33E42-9BF3-41CA-AC8B-8277D23690D8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AlgorithmsAndDataStructs</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0B89A163-4AA7-44D7-BAAD-EF72D1830BD6</key>
-		<string>https://github.com/rmpadsala/algorithms_and_datastructs</string>
+		<key>04E510F0-44CE-4281-9D48-DD5C613B9453</key>
+		<string>ssh://github.com/rmpadsala/algorithms_and_datastructs.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>data_structs/cpp/AlgorithmsAndDataStructs.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0B89A163-4AA7-44D7-BAAD-EF72D1830BD6</key>
+		<key>04E510F0-44CE-4281-9D48-DD5C613B9453</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rmpadsala/algorithms_and_datastructs</string>
+	<string>ssh://github.com/rmpadsala/algorithms_and_datastructs.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0B89A163-4AA7-44D7-BAAD-EF72D1830BD6</string>
+	<string>04E510F0-44CE-4281-9D48-DD5C613B9453</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0B89A163-4AA7-44D7-BAAD-EF72D1830BD6</string>
+			<string>04E510F0-44CE-4281-9D48-DD5C613B9453</string>
 			<key>IDESourceControlWCCName</key>
 			<string>algorithms_and_datastructs</string>
 		</dict>
