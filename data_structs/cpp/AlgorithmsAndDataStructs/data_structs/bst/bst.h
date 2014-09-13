@@ -42,6 +42,7 @@ namespace bst_ns {
         void remove(int value, BSTNode* parent);
         BSTNode* find(int value, BSTNode* node) const;
         void delete_node(BSTNode* nodeToDelete, BSTNode* parent, bool leftChild);
+        void destroy_node(BSTNode* node);
         void clear(BSTNode* node);
         
         /// helper functions

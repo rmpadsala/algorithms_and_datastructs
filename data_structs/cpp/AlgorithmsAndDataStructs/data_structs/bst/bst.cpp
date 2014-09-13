@@ -76,6 +76,11 @@ namespace bst_ns {
     }
     
     // private methods
+    void BST::destroy_node(BSTNode* node) {
+        --_count;
+        delete node;
+        node = nullptr;
+    }
     
     BSTNode* BST::createnode(int value) {
         // use smart_ptrs instead of raw ptrs
@@ -140,18 +145,15 @@ namespace bst_ns {
         // case - 1 remove leaf node
         if (leafnode(nodeToDelete)) {
             (leftChild) ? parent->_left = nullptr : parent->_right = nullptr;
-            --_count;
-            delete nodeToDelete;
+            destroy_node(nodeToDelete);
         } else if (nodeToDelete->_right == nullptr) {
             // case - 2 right tree is null
             (leftChild) ? parent->_left = nodeToDelete->_left : parent->_left = nodeToDelete->_right;
-            --_count;
-            delete nodeToDelete;
+            destroy_node(nodeToDelete);
         } else if (nodeToDelete->_left == nullptr) {
             // case - 3 left tree is null
             (leftChild) ? parent->_right = nodeToDelete->_left : parent->_right = nodeToDelete->_right;
-            --_count;
-            delete nodeToDelete;
+            destroy_node(nodeToDelete);
         } else {
             // case - 4 node has both left and right subtree
             // find largest node in left subtree, delete the node and
