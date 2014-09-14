@@ -9,6 +9,7 @@
 #include "queue_two_stacks.h"
 
 namespace algo_ns {
+    
     template <typename T>
     QueueTwoStacks<T>::QueueTwoStacks() {
     }
