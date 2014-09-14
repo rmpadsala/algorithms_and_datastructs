@@ -22,7 +22,6 @@ namespace adt_ns {
         // Todo....copy ctor and assignment operator
         
         bool empty() const;
-        void insert (int value);
         void insert_front(int value);
         void insert_back(int value);
         void remove_front();
@@ -52,6 +51,11 @@ namespace adt_ns {
     const Node* Deque::last() const {
         return _tail;
     }
+    
+    class DequeClient {
+    public:
+        static void run_client();
+    };
 }
 
 #endif /* defined(__AlgorithmsAndDataStructs__Deque__) */

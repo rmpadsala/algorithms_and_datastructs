@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Rakesh Patel. All rights reserved.
 //
 
+#include <vector>
 #include "deque.h"
 
 using namespace std;
@@ -23,10 +24,6 @@ namespace adt_ns {
     
     bool Deque::empty() const {
         return _head == nullptr;
-    }
-    
-    void Deque::insert(int value) {
-        insert_back(value);
     }
     
     void Deque::insert_back(int value) {
@@ -111,5 +108,41 @@ namespace adt_ns {
         }
         stream << endl;
         return stream;
+    }
+    
+    void DequeClient::run_client() {
+        cout << "**********************************************" << endl;
+        cout << "************RUNNING DEQUE CLIENT**************" << endl;
+        cout << "**********************************************" << endl;
+        
+        // Linked list test;
+        Deque list;
+        
+        //should print list is empty
+        list.remove_front();
+        //should print list is empty
+        list.remove_back();
+        
+        vector<int> back = { 10, 12, 45, 17, 39, 20, 25, 28 };
+        
+        for_each(back.begin(), back.end(), [&](int item) {
+            list.insert_back(item);
+        });
+        
+        vector<int> front = { -5, -65, 0, 1, 2, 55, 7, 96 };
+        
+        for_each(front.begin(), front.end(), [&](int item) {
+            list.insert_front(item);
+        });
+        
+        //should print 96, 7, 55, 2, 1, 0, -65, -5, 10, 12, 45, 17, 39, 20, 25, 28
+        cout << "list contents: " << list << ", size: " << list.length() << endl;
+        
+        list.remove_front();
+        list.remove_back();
+        list.remove_front();
+        
+        //should print 55, 2, 1, 0, -65, -5, 10, 12, 45, 17, 39, 20, 25
+        cout << "list contents: " << list << ", size: " << list.length() << endl;
     }
 }

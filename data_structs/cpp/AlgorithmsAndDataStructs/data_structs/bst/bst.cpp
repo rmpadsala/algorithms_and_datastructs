@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Rakesh Patel. All rights reserved.
 //
 
+#include <vector>
+
 #include "bst.h"
 
 using namespace std;
@@ -40,8 +42,8 @@ namespace bst_ns {
         insert(value, _root);
     }
     
-    void BST::printInOrder() const {
-        printInOrder(_root);
+    void BST::print_in_order() const {
+        print_in_order(_root);
         cout << endl;
     }
     
@@ -61,18 +63,19 @@ namespace bst_ns {
     }
     
     void BST::print_children(BSTNode* node) const {
-        cout << "node key = " << node->_value << endl;;
+        cout << "Node key = " << node->_value;
         
         if (leafnode(node)) {
-            cout << "node has no child" << endl;
+            cout << ", leaf node";
         } else {
             if (node->_left != nullptr) {
-                cout << "left child = " << node->_left->_value << endl;
+                cout << ", L: " << node->_left->_value;
             }
             if (node->_right != nullptr) {
-                cout << "right child = " << node->_right->_value << endl;
+                cout << ", R: " << node->_right->_value;
             }
         }
+        cout << endl;
     }
     
     // private methods
@@ -110,16 +113,16 @@ namespace bst_ns {
         }
     }
     
-    void BST::printInOrder(BSTNode* node) const {
+    void BST::print_in_order(BSTNode* node) const {
         if (empty()) {
             cout << "Tree is currently empty" << endl;
         } else {
             if (node->_left != nullptr) {
-                printInOrder(node->_left);
+                print_in_order(node->_left);
             }
             cout << node->_value << " ";
             if (node->_right != nullptr) {
-                printInOrder(node->_right);
+                print_in_order(node->_right);
             }
         }
     }
@@ -140,8 +143,6 @@ namespace bst_ns {
     }
     
     void BST::delete_node(BSTNode* nodeToDelete, BSTNode* parent, bool leftChild) {
-        cout << "Ready to delete node with value = " << nodeToDelete->_value << endl;
-        
         // case - 1 remove leaf node
         if (leafnode(nodeToDelete)) {
             (leftChild) ? parent->_left = nullptr : parent->_right = nullptr;
@@ -185,5 +186,41 @@ namespace bst_ns {
         } else {
             cout << "Tree is empty." << endl;
         }
+    }
+    
+    void BSTClient::run_client() {
+        cout << "**********************************************" << endl;
+        cout << "*************RUNNING BST CLIENT***************" << endl;
+        cout << "**********************************************" << endl;
+        
+        BST bst;
+        vector<int> items = { 50, 25, 35, 17, 37, 32, 20, 16, 19, 8, 70, 57, 80, 52, 59, 53, 62, 75, 85, 73, 77, 89 };
+        
+        for_each(items.begin(), items.end(), [&](int item) {
+            bst.insert(item);
+        });
+        
+        // should print 8 16 17 19 20 25 32 35 37 50 52 53 57 59 62 70 73 75 77 80 85 89
+        bst.print_in_order();
+        std::cout << "Total nodes " << bst.count() << endl;
+        
+        for_each(items.begin(), items.end(), [&](int item) {
+            bst.print_children(bst.find(item));
+        });
+        
+        // updating items vector is just for validation purpose
+        bst.remove(89); items.erase(std::remove(items.begin(), items.end(), 89), items.end());
+        bst.remove(16); items.erase(std::remove(items.begin(), items.end(), 16), items.end());
+        bst.remove(59); items.erase(std::remove(items.begin(), items.end(), 59), items.end());
+        bst.remove(57); items.erase(std::remove(items.begin(), items.end(), 57), items.end());
+        bst.remove(50); items.erase(std::remove(items.begin(), items.end(), 50), items.end());
+        
+        // should print: 8 17 19 20 25 32 35 37 52 53 62 70 73 75 77 80 85
+        bst.print_in_order();
+        std::cout << "Total nodes " << bst.count() << endl;
+        
+        for_each(items.begin(), items.end(), [&](int item) {
+            bst.print_children(bst.find(item));
+        });
     }
 }

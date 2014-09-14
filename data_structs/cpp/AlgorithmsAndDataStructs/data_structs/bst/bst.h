@@ -30,7 +30,7 @@ namespace bst_ns {
         /// helper functions
         inline size_t count() const;
         inline bool empty() const;
-        void printInOrder() const;
+        void print_in_order() const;
         BSTNode* find_largest(BSTNode* node) const;
         void print_children(BSTNode* node) const;
         
@@ -47,7 +47,7 @@ namespace bst_ns {
         
         /// helper functions
         inline bool leafnode(BSTNode* node) const;
-        void printInOrder(BSTNode* node) const;
+        void print_in_order(BSTNode* node) const;
         BSTNode* createnode(int value);
     };
     
@@ -62,6 +62,11 @@ namespace bst_ns {
     inline bool BST::leafnode(BSTNode* node) const {
         return node->_left == nullptr && node->_right == nullptr;
     }
+    
+    class BSTClient {
+    public:
+        static void run_client();
+    };
 }
 
 #endif /* defined(__AlgorithmsAndDataStructs__bst__) */

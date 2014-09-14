@@ -8,6 +8,8 @@
 
 #include "queue_two_stacks.h"
 
+using namespace std;
+
 namespace algo_ns {
     
     template <typename T>
@@ -58,6 +60,10 @@ namespace algo_ns {
     }
     
     void QueueTwoStacksClient::run_client() {
+        cout << "**********************************************" << endl;
+        cout << "********RUNNING Q with 2 Stacks CLIENT********" << endl;
+        cout << "**********************************************" << endl;
+        
         QueueTwoStacks<int> q;
         q.deque();
         q.enque(10);
@@ -77,10 +83,5 @@ namespace algo_ns {
         // should print 30 and 40
         std::cout << q.deque() << std::endl;
         std::cout << q.deque() << std::endl;
-        
-        std::cout << "Inbox" << std::endl;
-        q.print_contents(q.inbox());
-        std::cout << "Outbox" << std::endl;
-        q.print_contents(q.outbox());
     }
 }
