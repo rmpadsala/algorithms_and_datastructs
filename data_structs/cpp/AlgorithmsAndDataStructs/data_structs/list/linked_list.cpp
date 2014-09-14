@@ -99,7 +99,7 @@ namespace list_ns {
     }
     
     std::ostream& operator << (std::ostream& stream, const Node& node) {
-        stream << node._value << std::endl;
+        stream << node._value;
         return stream;
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14765D9119C560C900AD08EB /* queue_two_stacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14765D8F19C560C900AD08EB /* queue_two_stacks.cpp */; };
 		14B31DB519BA591E005BE18E /* bst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B31DB319BA591E005BE18E /* bst.cpp */; };
 		14C2179019BA01B700E1436D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C2178F19BA01B700E1436D /* main.cpp */; };
 		14C2179219BA01B700E1436D /* AlgorithmsAndDataStructs.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C2179119BA01B700E1436D /* AlgorithmsAndDataStructs.1 */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14765D8F19C560C900AD08EB /* queue_two_stacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = queue_two_stacks.cpp; path = AlgorithmsAndDataStructs/algorithms/queue_with_two_stacks/queue_two_stacks.cpp; sourceTree = "<group>"; };
+		14765D9019C560C900AD08EB /* queue_two_stacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = queue_two_stacks.h; path = AlgorithmsAndDataStructs/algorithms/queue_with_two_stacks/queue_two_stacks.h; sourceTree = "<group>"; };
 		14B31DAE19BA3775005BE18E /* list_node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = list_node.h; path = AlgorithmsAndDataStructs/data_structs/list/list_node.h; sourceTree = "<group>"; };
 		14B31DAF19BA37AF005BE18E /* bst_node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bst_node.h; path = AlgorithmsAndDataStructs/data_structs/bst/bst_node.h; sourceTree = "<group>"; };
 		14B31DB319BA591E005BE18E /* bst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bst.cpp; path = AlgorithmsAndDataStructs/data_structs/bst/bst.cpp; sourceTree = "<group>"; };
@@ -49,6 +52,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14765D8A19C55FEE00AD08EB /* algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				14765D8B19C55FFC00AD08EB /* queue_with_two_stacks */,
+			);
+			name = algorithms;
+			sourceTree = "<group>";
+		};
+		14765D8B19C55FFC00AD08EB /* queue_with_two_stacks */ = {
+			isa = PBXGroup;
+			children = (
+				14765D8F19C560C900AD08EB /* queue_two_stacks.cpp */,
+				14765D9019C560C900AD08EB /* queue_two_stacks.h */,
+			);
+			name = queue_with_two_stacks;
+			sourceTree = "<group>";
+		};
 		14B31DAB19BA3674005BE18E /* bst */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +82,7 @@
 		14C2178319BA01B700E1436D = {
 			isa = PBXGroup;
 			children = (
-				14C2179D19BA150100E1436D /* common */,
+				14765D8A19C55FEE00AD08EB /* algorithms */,
 				14C2179C19BA14E100E1436D /* data_structs */,
 				14C2178E19BA01B700E1436D /* AlgorithmsAndDataStructs */,
 				14C2178D19BA01B700E1436D /* Products */,
@@ -93,13 +113,6 @@
 				14C2179E19BA151E00E1436D /* list */,
 			);
 			name = data_structs;
-			sourceTree = "<group>";
-		};
-		14C2179D19BA150100E1436D /* common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = common;
 			sourceTree = "<group>";
 		};
 		14C2179E19BA151E00E1436D /* list */ = {
@@ -166,6 +179,7 @@
 				14B31DB519BA591E005BE18E /* bst.cpp in Sources */,
 				14C217A119BA17A100E1436D /* linked_list.cpp in Sources */,
 				14C2179019BA01B700E1436D /* main.cpp in Sources */,
+				14765D9119C560C900AD08EB /* queue_two_stacks.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

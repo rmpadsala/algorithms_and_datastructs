@@ -10,10 +10,12 @@
 
 #include "linked_list.h"
 #include "bst.h"
+#include "queue_two_stacks.h"
 
 using namespace std;
 using namespace list_ns;
 using namespace bst_ns;
+using namespace algo_ns;
 
 int main(int argc, const char * argv[])
 {
@@ -117,6 +119,8 @@ int main(int argc, const char * argv[])
     bst.printInOrder();
     
     cout << "count: " << bst.count() << endl;
+    
+    QueueTwoStacksClient::run_client();
     
     return 0;
 }
