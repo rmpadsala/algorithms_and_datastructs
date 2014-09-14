@@ -11,18 +11,22 @@
 
 namespace adt_ns {
     
+    template <typename T>
     class Node {
     public:
-        explicit Node(int value, Node* next = nullptr)
+        explicit Node(T value, Node<T>* next = nullptr)
         : _value(value)
         , _next(next)
         {}
         
         ~Node() {}
         
-        int _value;
-        Node * _next;
-        friend std::ostream& operator << (std::ostream& stream, const Node& node);
+        T _value;
+        Node<T> * _next;
+        friend std::ostream& operator << (std::ostream& stream, const Node<T>& node) {
+            stream << node._value;
+            return stream;
+        }
     };
 }
 

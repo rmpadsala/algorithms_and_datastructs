@@ -15,6 +15,7 @@
 
 namespace adt_ns {
     
+    template <typename T>
     class Deque {
     public:
         Deque();
@@ -22,33 +23,44 @@ namespace adt_ns {
         // Todo....copy ctor and assignment operator
         
         bool empty() const;
-        void insert_front(int value);
-        void insert_back(int value);
+        void insert_front(T value);
+        void insert_back(T value);
         void remove_front();
         void remove_back();
         void clear();
         
-        inline const Node* first() const;
-        inline const Node* last() const;
+        inline const Node<T>* first() const;
+        inline const Node<T>* last() const;
         inline size_t length() const;
         
-        friend std::ostream& operator << (std::ostream& stream, const Deque& list);
+        friend std::ostream& operator << (std::ostream& stream, const Deque<T>& list) {
+            const Node<T>* node = list.first();
+            while(node) {
+                stream << *node << ", ";
+                node = node->_next;
+            }
+            stream << std::endl;
+            return stream;
+        }
         
     private:
-        Node* _head;
-        Node* _tail;
+        Node<T>* _head;
+        Node<T>* _tail;
         size_t _size;
     };
     
-    size_t Deque::length() const {
+    template <typename T>
+    size_t Deque<T>::length() const {
         return _size;
     }
     
-    const Node* Deque::first() const {
+    template <typename T>
+    const Node<T>* Deque<T>::first() const {
         return _head;
     }
     
-    const Node* Deque::last() const {
+    template <typename T>
+    const Node<T>* Deque<T>::last() const {
         return _tail;
     }
     

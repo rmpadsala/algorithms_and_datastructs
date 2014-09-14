@@ -12,22 +12,27 @@
 using namespace std;
 
 namespace adt_ns {
-    Deque::Deque()
+    
+    template <typename T>
+    Deque<T>::Deque()
     : _head(nullptr)
     , _tail(nullptr)
     , _size(0)
     {}
     
-    Deque::~Deque()  {
+    template <typename T>
+    Deque<T>::~Deque()  {
         clear();
     }
     
-    bool Deque::empty() const {
+    template <typename T>
+    bool Deque<T>::empty() const {
         return _head == nullptr;
     }
     
-    void Deque::insert_back(int value) {
-        Node *node = new Node(value);
+    template <typename T>
+    void Deque<T>::insert_back(T value) {
+        Node<T> *node = new Node<T>(value);
         if (empty()) {
             _head = node;
             _tail = node;
@@ -38,8 +43,9 @@ namespace adt_ns {
         ++_size;
     }
     
-    void Deque::insert_front(int value) {
-        Node *node = new Node(value);
+    template <typename T>
+    void Deque<T>::insert_front(T value) {
+        Node<T> *node = new Node<T>(value);
         if (empty()) {
             _head = node;
             _tail = node;
@@ -50,9 +56,10 @@ namespace adt_ns {
         ++_size;
     }
     
-    void Deque::remove_front() {
+    template <typename T>
+    void Deque<T>::remove_front() {
         if (empty() == false) {
-            Node* front = _head;
+            Node<T>* front = _head;
             _head = _head->_next;
             delete front;
             --_size;
@@ -61,14 +68,15 @@ namespace adt_ns {
         }
     }
     
-    void Deque::remove_back() {
+    template <typename T>
+    void Deque<T>::remove_back() {
         if (empty() == false) {
             if (_head->_next == nullptr) {
                 delete _head;
                 _head = nullptr;
             } else {
-                Node* prev = _head;
-                Node* current = _head->_next;
+                Node<T>* prev = _head;
+                Node<T>* current = _head->_next;
                 
                 while (current->_next != nullptr) {
                     prev = current;
@@ -85,8 +93,9 @@ namespace adt_ns {
         }
     }
     
-    void Deque::clear() {
-        Node * node = _head;
+    template <typename T>
+    void Deque<T>::clear() {
+        Node<T> * node = _head;
         while (node) {
             node = node->_next;
             _head = node;
@@ -95,28 +104,13 @@ namespace adt_ns {
         }
     }
     
-    std::ostream& operator << (std::ostream& stream, const Node& node) {
-        stream << node._value;
-        return stream;
-    }
-    
-    std::ostream& operator << (std::ostream& stream, const Deque& list) {
-        const Node* node = list.first();
-        while(node) {
-            stream << *node << ", ";
-            node = node->_next;
-        }
-        stream << endl;
-        return stream;
-    }
-    
     void DequeClient::run_client() {
         cout << "**********************************************" << endl;
         cout << "************RUNNING DEQUE CLIENT**************" << endl;
         cout << "**********************************************" << endl;
         
         // Linked list test;
-        Deque list;
+        Deque<int> list;
         
         //should print list is empty
         list.remove_front();
