@@ -8,19 +8,19 @@
 
 #include <iostream>
 
-#include "linked_list.h"
+#include "deque.h"
 #include "bst.h"
 #include "queue_two_stacks.h"
 
 using namespace std;
-using namespace list_ns;
+using namespace adt_ns;
 using namespace bst_ns;
 using namespace algo_ns;
 
 int main(int argc, const char * argv[])
 {
     // Linked list test;
-    LinkedList list;
+    Deque list;
     list.remove_front();
     list.remove_back();
     list.insert(10);

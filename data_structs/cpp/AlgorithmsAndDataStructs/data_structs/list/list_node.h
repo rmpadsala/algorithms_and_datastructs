@@ -9,7 +9,8 @@
 #ifndef AlgorithmsAndDataStructs_Node_h
 #define AlgorithmsAndDataStructs_Node_h
 
-namespace list_ns {
+namespace adt_ns {
+    
     class Node {
     public:
         explicit Node(int value, Node* next = nullptr)

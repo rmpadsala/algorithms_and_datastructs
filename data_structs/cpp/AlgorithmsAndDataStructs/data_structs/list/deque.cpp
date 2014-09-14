@@ -1,35 +1,35 @@
 //
-//  LinkedList.cpp
+//  Deque.cpp
 //  AlgorithmsAndDataStructs
 //
 //  Created by Rakesh Patel on 9/5/14.
 //  Copyright (c) 2014 Rakesh Patel. All rights reserved.
 //
 
-#include "linked_list.h"
+#include "deque.h"
 
 using namespace std;
 
-namespace list_ns {
-    LinkedList::LinkedList()
+namespace adt_ns {
+    Deque::Deque()
     : _head(nullptr)
     , _tail(nullptr)
     , _size(0)
     {}
     
-    LinkedList::~LinkedList()  {
+    Deque::~Deque()  {
         clear();
     }
     
-    bool LinkedList::empty() const {
+    bool Deque::empty() const {
         return _head == nullptr;
     }
     
-    void LinkedList::insert(int value) {
+    void Deque::insert(int value) {
         insert_back(value);
     }
     
-    void LinkedList::insert_back(int value) {
+    void Deque::insert_back(int value) {
         Node *node = new Node(value);
         if (empty()) {
             _head = node;
@@ -41,7 +41,7 @@ namespace list_ns {
         ++_size;
     }
     
-    void LinkedList::insert_front(int value) {
+    void Deque::insert_front(int value) {
         Node *node = new Node(value);
         if (empty()) {
             _head = node;
@@ -53,7 +53,7 @@ namespace list_ns {
         ++_size;
     }
     
-    void LinkedList::remove_front() {
+    void Deque::remove_front() {
         if (empty() == false) {
             Node* front = _head;
             _head = _head->_next;
@@ -64,7 +64,7 @@ namespace list_ns {
         }
     }
     
-    void LinkedList::remove_back() {
+    void Deque::remove_back() {
         if (empty() == false) {
             if (_head->_next == nullptr) {
                 delete _head;
@@ -88,7 +88,7 @@ namespace list_ns {
         }
     }
     
-    void LinkedList::clear() {
+    void Deque::clear() {
         Node * node = _head;
         while (node) {
             node = node->_next;
@@ -103,7 +103,7 @@ namespace list_ns {
         return stream;
     }
     
-    std::ostream& operator << (std::ostream& stream, const LinkedList& list) {
+    std::ostream& operator << (std::ostream& stream, const Deque& list) {
         const Node* node = list.first();
         while(node) {
             stream << *node << ", ";
