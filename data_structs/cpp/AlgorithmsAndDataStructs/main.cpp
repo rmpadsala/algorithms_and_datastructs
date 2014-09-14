@@ -11,6 +11,7 @@
 #include "deque.h"
 #include "bst.h"
 #include "queue_two_stacks.h"
+#include "stack_with_max.h"
 
 using namespace std;
 using namespace adt_ns;
@@ -24,6 +25,8 @@ int main(int argc, const char * argv[])
     BSTClient::run_client();
     
     QueueTwoStacksClient::run_client();
+    
+    StackWithMaxClient::run_client();
     
     return 0;
 }
