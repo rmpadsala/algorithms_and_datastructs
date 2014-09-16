@@ -37,7 +37,14 @@ class LinkList
   def remove(value)
     if empty? == false
       if @head.value == value
-        @head.next == nil ? @head = nil : @head = @head.next
+
+        if @head.next == nil
+          @head = nil
+        else
+          node = @head
+          @head = @head.next
+          node = nil
+        end
       else
         prev = @head
         current = @head
