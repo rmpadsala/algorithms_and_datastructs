@@ -12,6 +12,9 @@
 #include "bst.h"
 #include "queue_two_stacks.h"
 #include "stack_with_max.h"
+#include "anagram.h"
+
+#include <map>
 
 using namespace std;
 using namespace adt_ns;
@@ -27,6 +30,8 @@ int main(int argc, const char * argv[])
     QueueTwoStacksClient::run_client();
     
     StackWithMaxClient::run_client();
+    
+    AnagramClient::run_client();
     
     return 0;
 }
