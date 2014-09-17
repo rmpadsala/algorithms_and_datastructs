@@ -13,6 +13,7 @@
 #include "queue_two_stacks.h"
 #include "stack_with_max.h"
 #include "anagram.h"
+#include "binary_search.h"
 
 #include <map>
 
@@ -32,6 +33,8 @@ int main(int argc, const char * argv[])
     StackWithMaxClient::run_client();
     
     AnagramClient::run_client();
+    
+    BinarySearchClient::run_client();
     
     return 0;
 }
