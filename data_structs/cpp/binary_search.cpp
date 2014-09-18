@@ -14,17 +14,17 @@ namespace algo_ns {
     
     template <typename T>
     bool BinarySearch<T>::search(T key, T collection[], T high, T low) {
-        if (high < low)
-            return false;
         
-        int mid = (high + low)/2;
+        while (high >= low) {
+            int mid = (high + low)/2;
         
-        if (key == collection[mid]) {
-            return true;
-        } else if (key > collection[mid]) {
-            return search(key, collection, high, mid+1);
-        } else {
-            return search(key, collection, mid-1, low);
+            if (key == collection[mid]) {
+                return true;
+            } else if (key > collection[mid]) {
+                return search(key, collection, high, mid+1);
+            } else {
+                return search(key, collection, mid-1, low);
+            }
         }
         
         return false;
@@ -32,6 +32,7 @@ namespace algo_ns {
     
     void BinarySearchClient::run_client() {
         int collection[] = { 1,2,3,4,5,6,7,8,20,21,23,35,45,56 };
+        //int collection[] =  { 56, 45, 34, 23, 34, 8, 7, 6, 5, 4 };
         int high = sizeof(collection)/sizeof(int);
         int low = 0;
         

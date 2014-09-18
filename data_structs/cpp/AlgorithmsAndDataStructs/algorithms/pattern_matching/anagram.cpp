@@ -18,7 +18,7 @@ namespace algo_ns {
         cout << "viral, liar is_anagram = " << (is_anagram("viral", "liar") ? "true" : "false") << std::endl;
         cout << "creative, reactive is_anagram = " << (is_anagram("creative", "reactive") ? "true" : "false") << std::endl;
         cout << "add, dad is_anagram = " << (is_anagram("add", "dad") ? "true" : "false") << std::endl;
-        cout << "aaca, aca is_anagram = " << (is_anagram("aaca", "aca   ") ? "true" : "false") << std::endl;
+        cout << "aaca, aca is_anagram = " << (is_anagram("aaca", "aca") ? "true" : "false") << std::endl;
     }
     
     bool AnagramClient::is_anagram(const std::string& one, const std::string& two) {
