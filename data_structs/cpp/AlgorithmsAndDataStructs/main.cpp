@@ -14,6 +14,7 @@
 #include "stack_with_max.h"
 #include "anagram.h"
 #include "binary_search.h"
+#include "detect_loop_link_list.h"
 
 #include <map>
 
@@ -57,6 +58,8 @@ int main(int argc, const char * argv[])
     AnagramClient::run_client();
     
     BinarySearchClient::run_client();
+    
+    DetectLoopClient::run_client();
     
     int a[] = { 12, 2, 4,6, 7, 9, 10, 11 };
     quick_sort(a, 0, sizeof(a)/sizeof(int));

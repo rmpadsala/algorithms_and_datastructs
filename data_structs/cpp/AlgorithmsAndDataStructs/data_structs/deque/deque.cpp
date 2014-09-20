@@ -138,5 +138,7 @@ namespace adt_ns {
         
         //should print 55, 2, 1, 0, -65, -5, 10, 12, 45, 17, 39, 20, 25
         cout << "list contents: " << list << ", size: " << list.length() << endl;
+        
+        return;
     }
 }
