@@ -11,9 +11,9 @@
 		14765D9E19C572FC00AD08EB /* detect_loop_link_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14765D9C19C572FC00AD08EB /* detect_loop_link_list.cpp */; };
 		14765DA219C5F0C200AD08EB /* deque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14765D9F19C5F0C200AD08EB /* deque.cpp */; };
 		14765DA919C602CE00AD08EB /* stack_with_max.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14765DA719C602CE00AD08EB /* stack_with_max.cpp */; };
+		14AAB8F219CF3E8000AC0812 /* binary_search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14AAB8F019CF3E8000AC0812 /* binary_search.cpp */; };
 		14B31DB519BA591E005BE18E /* bst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B31DB319BA591E005BE18E /* bst.cpp */; };
 		14C1DE6E19C9277300FBFFC1 /* anagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C1DE6C19C9277300FBFFC1 /* anagram.cpp */; };
-		14C1DE7319C9283900FBFFC1 /* binary_search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C1DE7119C9283900FBFFC1 /* binary_search.cpp */; };
 		14C2179019BA01B700E1436D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C2178F19BA01B700E1436D /* main.cpp */; };
 		14C2179219BA01B700E1436D /* AlgorithmsAndDataStructs.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14C2179119BA01B700E1436D /* AlgorithmsAndDataStructs.1 */; };
 /* End PBXBuildFile section */
@@ -41,13 +41,14 @@
 		14765DA119C5F0C200AD08EB /* list_node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = list_node.h; path = AlgorithmsAndDataStructs/data_structs/deque/list_node.h; sourceTree = "<group>"; };
 		14765DA719C602CE00AD08EB /* stack_with_max.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stack_with_max.cpp; path = AlgorithmsAndDataStructs/algorithms/stack_with_max/stack_with_max.cpp; sourceTree = "<group>"; };
 		14765DA819C602CE00AD08EB /* stack_with_max.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack_with_max.h; path = AlgorithmsAndDataStructs/algorithms/stack_with_max/stack_with_max.h; sourceTree = "<group>"; };
+		14AAB8EF19CF3E5A00AC0812 /* sorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sorting.h; sourceTree = "<group>"; };
+		14AAB8F019CF3E8000AC0812 /* binary_search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = binary_search.cpp; path = AlgorithmsAndDataStructs/algorithms/searching/binary_search/binary_search.cpp; sourceTree = "<group>"; };
+		14AAB8F119CF3E8000AC0812 /* binary_search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = binary_search.h; path = AlgorithmsAndDataStructs/algorithms/searching/binary_search/binary_search.h; sourceTree = "<group>"; };
 		14B31DAF19BA37AF005BE18E /* bst_node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bst_node.h; path = AlgorithmsAndDataStructs/data_structs/bst/bst_node.h; sourceTree = "<group>"; };
 		14B31DB319BA591E005BE18E /* bst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bst.cpp; path = AlgorithmsAndDataStructs/data_structs/bst/bst.cpp; sourceTree = "<group>"; };
 		14B31DB419BA591E005BE18E /* bst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bst.h; path = AlgorithmsAndDataStructs/data_structs/bst/bst.h; sourceTree = "<group>"; };
 		14C1DE6C19C9277300FBFFC1 /* anagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = anagram.cpp; path = AlgorithmsAndDataStructs/algorithms/pattern_matching/anagram.cpp; sourceTree = "<group>"; };
 		14C1DE6D19C9277300FBFFC1 /* anagram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = anagram.h; path = AlgorithmsAndDataStructs/algorithms/pattern_matching/anagram.h; sourceTree = "<group>"; };
-		14C1DE7119C9283900FBFFC1 /* binary_search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binary_search.cpp; sourceTree = "<group>"; };
-		14C1DE7219C9283900FBFFC1 /* binary_search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binary_search.h; sourceTree = "<group>"; };
 		14C2178C19BA01B700E1436D /* AlgorithmsAndDataStructs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmsAndDataStructs; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C2178F19BA01B700E1436D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		14C2179119BA01B700E1436D /* AlgorithmsAndDataStructs.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = AlgorithmsAndDataStructs.1; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		14765D8A19C55FEE00AD08EB /* algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				14AAB8EE19CF3DD400AC0812 /* sorting */,
 				14C1DE6F19C927A700FBFFC1 /* searching */,
 				14C1DE6819C9225D00FBFFC1 /* pattern_matching */,
 				14765DA319C6019000AD08EB /* stack_with_max */,
@@ -103,6 +105,14 @@
 			name = stack_with_max;
 			sourceTree = "<group>";
 		};
+		14AAB8EE19CF3DD400AC0812 /* sorting */ = {
+			isa = PBXGroup;
+			children = (
+				14AAB8EF19CF3E5A00AC0812 /* sorting.h */,
+			);
+			name = sorting;
+			sourceTree = "<group>";
+		};
 		14B31DAB19BA3674005BE18E /* bst */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +143,8 @@
 		14C1DE7019C927CC00FBFFC1 /* binary_search */ = {
 			isa = PBXGroup;
 			children = (
-				14C1DE7119C9283900FBFFC1 /* binary_search.cpp */,
-				14C1DE7219C9283900FBFFC1 /* binary_search.h */,
+				14AAB8F019CF3E8000AC0812 /* binary_search.cpp */,
+				14AAB8F119CF3E8000AC0812 /* binary_search.h */,
 			);
 			name = binary_search;
 			sourceTree = "<group>";
@@ -240,7 +250,7 @@
 				14C2179019BA01B700E1436D /* main.cpp in Sources */,
 				14765D9E19C572FC00AD08EB /* detect_loop_link_list.cpp in Sources */,
 				14765DA219C5F0C200AD08EB /* deque.cpp in Sources */,
-				14C1DE7319C9283900FBFFC1 /* binary_search.cpp in Sources */,
+				14AAB8F219CF3E8000AC0812 /* binary_search.cpp in Sources */,
 				14765D9119C560C900AD08EB /* queue_two_stacks.cpp in Sources */,
 				14765DA919C602CE00AD08EB /* stack_with_max.cpp in Sources */,
 				14C1DE6E19C9277300FBFFC1 /* anagram.cpp in Sources */,
