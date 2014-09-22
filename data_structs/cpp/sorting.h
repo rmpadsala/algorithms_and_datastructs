@@ -12,6 +12,7 @@
 #include <iostream>
 
 #include "selection_sort.h"
+#include "insertion_sort.h"
 
 namespace algo_ns {
     
@@ -28,9 +29,9 @@ namespace algo_ns {
         static void run_client() {
             std::cout << "Running selection sort...." << std::endl;
             
-            std::vector<int> collection = { 10, 22, 13, 23, 48, 42, 95 };
+            std::vector<int> collection = { 10, 22, 13, 23, 48, 42, 95, 8, 6 };
             
-            std::cout << "Collection before running sort..." << std::endl;
+            std::cout << "Collection before running selection sort..." << std::endl;
             
             std::for_each(collection.begin(), collection.end(), [](int i) {
                 std::cout << i << ",";
@@ -39,7 +40,27 @@ namespace algo_ns {
             
             SortingImpl<SelectionSort>::sort(collection);
             
-            std::cout << "Collection after running sort..." << std::endl;
+            std::cout << "Collection after running selection sort..." << std::endl;
+            
+            std::for_each(collection.begin(), collection.end(), [](int i) {
+                std::cout << i << ",";
+            });
+            std::cout << std::endl;
+            
+            // using built-in random generator:
+            std::srand ( unsigned ( std::time(0) ) );
+            std::random_shuffle ( collection.begin(), collection.end() );
+
+            std::cout << "Collection before running insertion sort..." << std::endl;
+            
+            std::for_each(collection.begin(), collection.end(), [](int i) {
+                std::cout << i << ",";
+            });
+            std::cout << std::endl;
+            
+            SortingImpl<InsertionSort>::sort(collection);
+            
+            std::cout << "Collection after running insertion sort..." << std::endl;
             
             std::for_each(collection.begin(), collection.end(), [](int i) {
                 std::cout << i << ",";

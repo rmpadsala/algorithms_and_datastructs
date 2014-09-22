@@ -13,6 +13,7 @@
 		14765DA919C602CE00AD08EB /* stack_with_max.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14765DA719C602CE00AD08EB /* stack_with_max.cpp */; };
 		14AAB8F219CF3E8000AC0812 /* binary_search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14AAB8F019CF3E8000AC0812 /* binary_search.cpp */; };
 		14AAB8F519CFA51B00AC0812 /* selection_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14AAB8F319CFA51B00AC0812 /* selection_sort.cpp */; };
+		14AAB8F819CFDA2E00AC0812 /* insertion_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14AAB8F619CFDA2E00AC0812 /* insertion_sort.cpp */; };
 		14B31DB519BA591E005BE18E /* bst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B31DB319BA591E005BE18E /* bst.cpp */; };
 		14C1DE6E19C9277300FBFFC1 /* anagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C1DE6C19C9277300FBFFC1 /* anagram.cpp */; };
 		14C2179019BA01B700E1436D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14C2178F19BA01B700E1436D /* main.cpp */; };
@@ -47,6 +48,8 @@
 		14AAB8F119CF3E8000AC0812 /* binary_search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = binary_search.h; path = AlgorithmsAndDataStructs/algorithms/searching/binary_search/binary_search.h; sourceTree = "<group>"; };
 		14AAB8F319CFA51B00AC0812 /* selection_sort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = selection_sort.cpp; path = AlgorithmsAndDataStructs/algorithms/sorting/selection_sort.cpp; sourceTree = "<group>"; };
 		14AAB8F419CFA51B00AC0812 /* selection_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selection_sort.h; path = AlgorithmsAndDataStructs/algorithms/sorting/selection_sort.h; sourceTree = "<group>"; };
+		14AAB8F619CFDA2E00AC0812 /* insertion_sort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = insertion_sort.cpp; path = AlgorithmsAndDataStructs/algorithms/sorting/insertion_sort.cpp; sourceTree = "<group>"; };
+		14AAB8F719CFDA2E00AC0812 /* insertion_sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = insertion_sort.h; path = AlgorithmsAndDataStructs/algorithms/sorting/insertion_sort.h; sourceTree = "<group>"; };
 		14B31DAF19BA37AF005BE18E /* bst_node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bst_node.h; path = AlgorithmsAndDataStructs/data_structs/bst/bst_node.h; sourceTree = "<group>"; };
 		14B31DB319BA591E005BE18E /* bst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bst.cpp; path = AlgorithmsAndDataStructs/data_structs/bst/bst.cpp; sourceTree = "<group>"; };
 		14B31DB419BA591E005BE18E /* bst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bst.h; path = AlgorithmsAndDataStructs/data_structs/bst/bst.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				14AAB8EF19CF3E5A00AC0812 /* sorting.h */,
 				14AAB8F319CFA51B00AC0812 /* selection_sort.cpp */,
 				14AAB8F419CFA51B00AC0812 /* selection_sort.h */,
+				14AAB8F619CFDA2E00AC0812 /* insertion_sort.cpp */,
+				14AAB8F719CFDA2E00AC0812 /* insertion_sort.h */,
 			);
 			name = sorting;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				14765D9119C560C900AD08EB /* queue_two_stacks.cpp in Sources */,
 				14765DA919C602CE00AD08EB /* stack_with_max.cpp in Sources */,
 				14C1DE6E19C9277300FBFFC1 /* anagram.cpp in Sources */,
+				14AAB8F819CFDA2E00AC0812 /* insertion_sort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
