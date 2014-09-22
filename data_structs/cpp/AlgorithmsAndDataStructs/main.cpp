@@ -15,6 +15,7 @@
 #include "anagram.h"
 #include "binary_search.h"
 #include "detect_loop_link_list.h"
+#include "sorting.h"
 
 #include <map>
 
@@ -61,14 +62,16 @@ int main(int argc, const char * argv[])
     
     DetectLoopClient::run_client();
     
-    int a[] = { 12, 2, 4,6, 7, 9, 10, 11 };
-    quick_sort(a, 0, sizeof(a)/sizeof(int));
+    SortingClient::run_client();
     
-    std::for_each(a, a+sizeof(a)/sizeof(int), [&](int c) {
-        std::cout << c << ",";
-    });
-    
-    std::cout << std::endl;
+//    int a[] = { 12, 2, 4,6, 7, 9, 10, 11 };
+//    quick_sort(a, 0, sizeof(a)/sizeof(int));
+//    
+//    std::for_each(a, a+sizeof(a)/sizeof(int), [&](int c) {
+//        std::cout << c << ",";
+//    });
+//    
+//    std::cout << std::endl;
     
     return 0;
 }
