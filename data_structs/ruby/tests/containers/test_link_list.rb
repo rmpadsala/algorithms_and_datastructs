@@ -107,7 +107,7 @@ class TestLinkList < Test::Unit::TestCase
     obj.insert_front(11)
     obj.insert_end(12)
     obj.insert_end(19)
-    assert_not_nil(obj.find(11))
+    assert_not_nil(obj.find(12))
     assert_nil(obj.find(16))
   end
 
