@@ -1,7 +1,11 @@
 # load all the classes
 
+
 DIR_PATHS = ["./containers/list",
-  "./containers/trees/bst"]
+  "./containers/trees/bst",
+  "./algorithms/sorting",
+  "./spec/helpers"
+]
 
 DIR_PATHS.each do |path|
   rb_all = Dir["#{path}/*.rb"]
