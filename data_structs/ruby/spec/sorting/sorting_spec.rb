@@ -18,4 +18,12 @@ describe "Sorting" do
       expect(Algorithms::InsertionSort.sorted?(sorted_collection)).to be true
     end
   end
+
+  describe "#merge_sort" do
+    it "should correctly sort elements" do
+      @collection + [88, 3, 5, 7, 102]
+      sorted_collection = Algorithms::MergeSort.sort(@collection)
+      expect(Algorithms::MergeSort.sorted?(sorted_collection)).to be true
+    end
+  end
 end
