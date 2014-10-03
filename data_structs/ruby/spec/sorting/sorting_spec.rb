@@ -26,4 +26,12 @@ describe "Sorting" do
       expect(Algorithms::MergeSort.sorted?(sorted_collection)).to be true
     end
   end
+
+  describe "#shell_sort" do
+    it "should correctly sort elements" do
+      @collection + [3, 88, 102]
+      sorted_collection = Algorithms::ShellSort.sort(@collection)
+      expect(Algorithms::ShellSort.sorted?(sorted_collection)).to be true
+    end
+  end
 end
