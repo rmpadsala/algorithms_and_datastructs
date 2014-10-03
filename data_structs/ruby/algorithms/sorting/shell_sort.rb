@@ -15,12 +15,10 @@ module Algorithms
 
       while h >= 1
         for i in h..size-1
-          j = i
-          while j >= h
+          (i).step(h, -h) do |j|
             if less(collection[j], collection[j-h])
               collection[j], collection[j-h] = collection[j-h], collection[j]
             end
-            j -= h
           end
         end
         h = h/3
