@@ -15,9 +15,15 @@
 namespace algo_ns {
     class MergeSort {
     public:
-        static void sort(std::vector<int>& collection) {}
+        static void sort(std::vector<int>& collection);
         
     private:
+        static void sort(std::vector<int>&collection, std::vector<int>& aux_ary,
+                         size_t low, size_t high);
+        
+        static void merge(std::vector<int>& collection,
+                          std::vector<int>& aux_ary,
+                          size_t low, size_t mid, size_t high);
     };
 }
 

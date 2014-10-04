@@ -13,6 +13,7 @@
 
 #include "selection_sort.h"
 #include "insertion_sort.h"
+#include "merge_sort.h"
 
 namespace algo_ns {
     
@@ -67,7 +68,27 @@ namespace algo_ns {
             });
             std::cout << std::endl;
             
-            std::cout << "End selection sort....." << std::endl;
+            
+            // using built-in random generator:
+            std::srand ( unsigned ( std::time(0) ) );
+            std::random_shuffle ( collection.begin(), collection.end() );
+            
+            std::cout << "Collection before running merge sort..." << std::endl;
+            
+            std::for_each(collection.begin(), collection.end(), [](int i) {
+                std::cout << i << ",";
+            });
+            std::cout << std::endl;
+            
+            SortingImpl<MergeSort>::sort(collection);
+            
+            std::cout << "Collection after running merge sort..." << std::endl;
+            
+            std::for_each(collection.begin(), collection.end(), [](int i) {
+                std::cout << i << ",";
+            });
+            std::cout << std::endl;
+            
         }
     };
 }

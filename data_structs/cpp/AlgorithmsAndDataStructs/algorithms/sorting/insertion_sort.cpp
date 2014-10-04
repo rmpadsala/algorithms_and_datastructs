@@ -12,16 +12,16 @@
 namespace algo_ns {
     
     void InsertionSort::sort(std::vector<int>& collection) {
-        int i = 0;
-        for (; i < collection.size()-1; ++i) {
-            int j = i;
-            for(; j >= 0; --j) {
-                if (collection[j] < collection[j-1]) {
-                    int temp = collection[j-1];
-                    collection[j-1] = collection[j];
-                    collection[j] = temp;
-                } else break;
+        for (auto i=0; i < collection.size(); ++i) {
+            auto value = collection[i];
+            auto lowest_index = i;
+            
+            while (lowest_index > 0 && collection[lowest_index-1] > value) {
+                collection[lowest_index] = collection[lowest_index-1];
+                lowest_index--;
             }
+            
+            collection[lowest_index] = value;
         }
     }
 }

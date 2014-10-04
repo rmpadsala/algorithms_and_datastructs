@@ -22,12 +22,7 @@ namespace algo_ns {
                     min = j;
                 }
             }
-            
-            if (min != i) {
-                int temp = collection[min];
-                collection[min] = collection[i];
-                collection[i] = temp;
-            }
+            std::swap(collection[min], collection[i]);
         }
     }
 }
