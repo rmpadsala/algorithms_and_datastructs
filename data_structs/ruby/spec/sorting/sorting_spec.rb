@@ -34,4 +34,12 @@ describe "Sorting" do
       expect(Algorithms::ShellSort.sorted?(sorted_collection)).to be true
     end
   end
+
+  describe "#shell_sort" do
+    it "should correctly sort elements" do
+      @collection = [46, 71, 73, 77, 68, 18, 67, 60, 84, 46, 43, 29, 46]
+      sorted_collection = Algorithms::QuickSort.sort(@collection)
+      expect(Algorithms::QuickSort.sorted?(sorted_collection)).to be true
+    end
+  end
 end
