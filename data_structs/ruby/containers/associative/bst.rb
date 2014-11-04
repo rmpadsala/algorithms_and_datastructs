@@ -52,6 +52,11 @@ module Containers
         max(node.right)
       end
 
+      def get(key)
+        get_(key, @root)
+      end
+      alias_method :[], :get
+
       private
         def inorder_(node)
           return if node.nil?
@@ -83,6 +88,20 @@ module Containers
             queue << item.left unless item.left.nil?
             queue << item.right unless item.right.nil?
           end
+        end
+
+        def get_(key, node)
+          return nil if node.nil?
+
+          val = nil
+          if key < node.key
+            val = get_(key, node.left)
+          elsif key > node.key
+            val = get_(key, node.right)
+          else
+            val = node.value
+          end
+          val
         end
 
         def insert_(key, value, node)
