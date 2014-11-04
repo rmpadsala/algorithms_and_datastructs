@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe LinkList do
+describe "LinkList" do
   before :each do
     @list_obj = Containers::Sequence::LinkList.new
   end

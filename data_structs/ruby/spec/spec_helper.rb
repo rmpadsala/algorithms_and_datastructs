@@ -1,8 +1,8 @@
 # load all the classes
 
 
-DIR_PATHS = ["./containers/list",
-  "./containers/trees/bst",
+DIR_PATHS = ["./containers/sequence",
+  "./containers/associative",
   "./algorithms/sorting",
   "./algorithms/priority_queue",
   "./spec/helpers"
