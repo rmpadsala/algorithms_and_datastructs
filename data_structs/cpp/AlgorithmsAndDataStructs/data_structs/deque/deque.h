@@ -28,6 +28,7 @@ namespace adt_ns {
         void remove_front();
         void remove_back();
         void clear();
+        void reverse(Node<T>* node);
         
         inline const Node<T>* first() const;
         inline const Node<T>* last() const;

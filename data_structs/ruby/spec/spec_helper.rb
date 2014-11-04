@@ -4,6 +4,7 @@
 DIR_PATHS = ["./containers/list",
   "./containers/trees/bst",
   "./algorithms/sorting",
+  "./algorithms/priority_queue",
   "./spec/helpers"
 ]
 

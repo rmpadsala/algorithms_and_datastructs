@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8C3545A6497BDEDA85618B603ED6918D6031C2BD</key>
-		<string>ssh://github.com/rmpadsala/algorithms_and_datastructs.git</string>
+		<string>github.com:rmpadsala/algorithms_and_datastructs.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>data_structs/cpp/AlgorithmsAndDataStructs.xcodeproj/project.xcworkspace</string>
+	<string>data_structs/cpp/AlgorithmsAndDataStructs.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8C3545A6497BDEDA85618B603ED6918D6031C2BD</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/rmpadsala/algorithms_and_datastructs.git</string>
+	<string>github.com:rmpadsala/algorithms_and_datastructs.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

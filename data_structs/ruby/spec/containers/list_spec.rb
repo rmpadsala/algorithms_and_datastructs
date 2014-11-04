@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe LinkList do
   before :each do
-    @list_obj = LinkList.new
+    @list_obj = Containers::Sequence::LinkList.new
   end
 
   describe ".instance_methods" do

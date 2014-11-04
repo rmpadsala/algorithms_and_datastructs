@@ -104,6 +104,24 @@ namespace adt_ns {
         }
     }
     
+    template <typename T>
+    void Deque<T>::reverse(Node<T>* node) {
+        if (empty() || node == _tail)
+            return;
+        
+        Node<T> *current, *prev, *next;
+        prev = nullptr;
+        current = node;
+        _tail = node;
+        while (current != nullptr) {
+            next = current->_next;
+            current->_next = prev;
+            prev = current;
+            current = next;
+        }
+        _head = prev;
+    }
+    
     void DequeClient::run_client() {
         cout << "**********************************************" << endl;
         cout << "************RUNNING DEQUE CLIENT**************" << endl;
@@ -137,6 +155,9 @@ namespace adt_ns {
         list.remove_front();
         
         //should print 55, 2, 1, 0, -65, -5, 10, 12, 45, 17, 39, 20, 25
+        cout << "list contents: " << list << ", size: " << list.length() << endl;
+        
+        list.reverse(const_cast<Node<int>*>(list.first()));
         cout << "list contents: " << list << ", size: " << list.length() << endl;
         
         return;

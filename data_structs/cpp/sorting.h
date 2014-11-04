@@ -30,7 +30,7 @@ namespace algo_ns {
         static void run_client() {
             std::cout << "Running selection sort...." << std::endl;
             
-            std::vector<int> collection = { 10, 22, 13, 23, 48, 42, 95, 8, 6 };
+            std::vector<int> collection = { 10, 22, 13, 23, 23, 48, 42, 95, 8, 8, 6 };
             
             std::cout << "Collection before running selection sort..." << std::endl;
             
