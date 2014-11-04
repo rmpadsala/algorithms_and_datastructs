@@ -4,22 +4,22 @@ module Containers
       class TreeNode
         attr_accessor :left, :right, :value, :key
 
-        def initialize(value, left=nil, right=nil)
+        def initialize(key, value, left=nil, right=nil)
+          @key = key
           @value = value
           @left = left
           @right = right
-          # @key = key
         end
       end
 
       attr_accessor :root
 
-      def insert(value)
-        @root = insert_(value, @root)
+      def insert(key, value)
+        @root = insert_(key, value, @root)
       end
 
-      def remove(value)
-        @root = remove_(value, @root)
+      def remove(key)
+        @root = remove_(key, @root)
       end
 
       def inorder
@@ -32,6 +32,10 @@ module Containers
 
       def postorder
         postorder_(@root)
+      end
+
+      def levelorder
+        levelorder_(@root)
       end
 
       def leaf?(node)
@@ -52,13 +56,13 @@ module Containers
         def inorder_(node)
           return if node.nil?
           inorder_(node.left)
-          p node.value
+          p node.key
           inorder_(node.right)
         end
 
         def preorder_(node)
           return if node.nil?
-          p node.value
+          p node.key
           preorder_(node.left)
           preorder_(node.right)
         end
@@ -67,18 +71,30 @@ module Containers
           return if node.nil?
           postorder_(node.left)
           postorder_(node.right)
-          p node.value
+          p node.key
         end
 
-        def insert_(value, node)
-          return TreeNode.new(value) if node.nil?
+        def levelorder_(node)
+          return if node.nil?
+          queue = [node]
+          while queue.any?
+            item = queue.shift
+            puts item.key
+            queue << item.left unless item.left.nil?
+            queue << item.right unless item.right.nil?
+          end
+        end
 
-          if (value < node.value)
-            node.left = insert_(value, node.left)
-          elsif (value > node.value)
-            node.right = insert_(value, node.right)
+        def insert_(key, value, node)
+          return TreeNode.new(key, value) if node.nil?
+
+          if (key < node.key)
+            node.left = insert_(key, value, node.left)
+          elsif (key > node.key)
+            node.right = insert_(key, value, node.right)
           else
-            # handle equal
+            # overwrite value if key is same
+            node.value = value
           end
           node
         end
@@ -90,13 +106,13 @@ module Containers
           node
         end
 
-        def remove_(value, node)
+        def remove_(key, node)
           return nil if node.nil?
 
-          if value < node.value
-            node.left = remove_(value, node.left)
-          elsif value > node.value
-            node.right = remove_(value, node.right)
+          if key < node.key
+            node.left = remove_(key, node.left)
+          elsif key > node.key
+            node.right = remove_(key, node.right)
           else
             return node.right if node.left.nil?
             return node.left if node.right.nil?
