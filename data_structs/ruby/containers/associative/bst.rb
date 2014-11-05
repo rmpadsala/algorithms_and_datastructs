@@ -22,22 +22,6 @@ module Containers
         @root = remove_(key, @root)
       end
 
-      def inorder
-        inorder_(@root)
-      end
-
-      def preorder
-        preorder_(@root)
-      end
-
-      def postorder
-        postorder_(@root)
-      end
-
-      def levelorder
-        levelorder_(@root)
-      end
-
       def leaf?(node)
         node.left == nil && node.right == nil
       end
@@ -58,37 +42,6 @@ module Containers
       alias_method :[], :get
 
       private
-        def inorder_(node)
-          return if node.nil?
-          inorder_(node.left)
-          p node.key
-          inorder_(node.right)
-        end
-
-        def preorder_(node)
-          return if node.nil?
-          p node.key
-          preorder_(node.left)
-          preorder_(node.right)
-        end
-
-        def postorder_(node)
-          return if node.nil?
-          postorder_(node.left)
-          postorder_(node.right)
-          p node.key
-        end
-
-        def levelorder_(node)
-          return if node.nil?
-          queue = [node]
-          while queue.any?
-            item = queue.shift
-            puts item.key
-            queue << item.left unless item.left.nil?
-            queue << item.right unless item.right.nil?
-          end
-        end
 
         def get_(key, node)
           return nil if node.nil?
