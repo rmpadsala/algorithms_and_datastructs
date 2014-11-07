@@ -14,16 +14,16 @@ module Containers
 
       attr_accessor :root
 
+      def self.leaf?(node)
+        node.left == nil && node.right == nil
+      end
+
       def insert(key, value)
         @root = insert_(key, value, @root)
       end
 
       def remove(key)
         @root = remove_(key, @root)
-      end
-
-      def leaf?(node)
-        node.left == nil && node.right == nil
       end
 
       def min(node)
@@ -40,6 +40,12 @@ module Containers
         get_(key, @root)
       end
       alias_method :[], :get
+
+      def delete_min(node)
+        return node.right if node.left.nil?
+        node.left = delete_min_(node.left)
+        node
+      end
 
       private
 
@@ -71,13 +77,6 @@ module Containers
           node
         end
 
-        def delete_min_(node)
-          return node.right if node.left.nil?
-
-          node.left = delete_min_(node.left)
-          node
-        end
-
         def remove_(key, node)
           return nil if node.nil?
 
@@ -91,7 +90,7 @@ module Containers
 
             del_node = node
             node = min(del_node.right)
-            node.right = delete_min_(del_node.right)
+            node.right = delete_min(del_node.right)
             node.left = del_node.left
           end
           node

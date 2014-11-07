@@ -5,6 +5,8 @@ DIR_PATHS = ["./containers/sequence",
   "./containers/associative",
   "./algorithms/sorting",
   "./algorithms/priority_queue",
+  "./graphs/directed",
+  "./graphs/undirected",
   "./spec/helpers"
 ]
 
