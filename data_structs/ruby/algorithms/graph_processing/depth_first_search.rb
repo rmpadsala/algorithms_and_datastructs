@@ -13,11 +13,13 @@ module Algorithms
 
         def dfs(g, v)
           @marked[v] = true
-          g.adj(v).each_with_index do |neighbour, index|
-            unless @marked[index]
-              @marked[index] = true
+          g.adj(v).each do |neighbour|
+            unless @marked[neighbour]
+              @marked[neighbour] = true
+              p "before: dfs(g, #{neighbour})"
               dfs(g, neighbour)
-              @edge_to[index] = v
+              p "after: dfs(g, #{neighbour}), #{neighbour} = #{v}"
+              @edge_to[neighbour] = v
             end
           end
         end
