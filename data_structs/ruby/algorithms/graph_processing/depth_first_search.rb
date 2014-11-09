@@ -3,10 +3,28 @@ module Algorithms
     class DepthFirstSearch
 
       def initialize(graph, source)
+        @source = source
         @marked = []
         @edge_to = []
         graph.vertices.times { @marked << false }
         dfs(graph, source)
+      end
+
+      def path?(v)
+        @marked[v]
+      end
+
+      def path_to(v)
+        path = []
+        if path?(v)
+          vertex = v
+          while vertex != @source
+            path << vertex
+            vertex = @edge_to[vertex]
+          end
+          path << @source
+        end
+        path
       end
 
       private
