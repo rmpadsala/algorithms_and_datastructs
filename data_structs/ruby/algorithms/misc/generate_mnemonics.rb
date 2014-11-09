@@ -2,14 +2,14 @@ module Algorithms
   class GenerateMnemonics
     NUMBER_TO_CHARS = {
       1=> '1',
-      2=> 'abc',
-      3=> 'def',
-      4=> 'ghi',
-      5=> 'jkl',
-      6=> 'mno',
-      7=> 'pqrs',
-      8=> 'tuv',
-      9=> 'wxyz',
+      2=> 'abc2',
+      3=> 'def3',
+      4=> 'ghi4',
+      5=> 'jkl5',
+      6=> 'mno6',
+      7=> 'pqrs7',
+      8=> 'tuv8',
+      9=> 'wxyz9',
       0=> '0'
     }
 
@@ -34,6 +34,25 @@ module Algorithms
       end
       out
     end
+
+    def mnemonics_recursive
+      out = NUMBER_TO_CHARS[@first.to_i].chars.map { |c| c }
+      mnemonics_recursive_(@rest, out)
+    end
+
+    private
+      def mnemonics_recursive_(string, out)
+        return out if string.empty?
+
+        first = string.slice(0)
+        mapped_letters = NUMBER_TO_CHARS[first.to_i]
+
+        out.map! do |item|
+          mapped_letters.chars.map { |c| "#{item}#{c}" }
+        end.flatten!
+
+        mnemonics_recursive_(string.slice(1, string.length), out)
+      end
 
   end
 end
